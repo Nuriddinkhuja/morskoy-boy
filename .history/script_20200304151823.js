@@ -2,7 +2,6 @@ const record = document.getElementById('record');
 const shot = document.getElementById('shot');
 const hit = document.getElementById('hit');
 const dead = document.getElementById('dead');
-
 const enemy = document.getElementById('enemy');
 const again = document.getElementById('again');
 
@@ -41,9 +40,11 @@ const show = {
 const fire = (e) => {
     // console.log(e.target.className);  
     const target = e.target;
-    
+    const eClass = e.target.className;
+    if (eClass != 'miss')  {
+        play.updateData = 'shot';
+    }
     show.miss(target);   
-    play.updateData = 'shot';
 };
 
 const init = () => {
