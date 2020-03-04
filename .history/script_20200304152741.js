@@ -47,6 +47,7 @@ const fire = (e) => {
     }
     
     show.miss(target);   
+    
 };
 
 const init = () => {
